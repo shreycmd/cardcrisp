@@ -1,20 +1,15 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import Flashcards from '../component/Flashcards';
-import Head from '../component/Head';
-import Button from '../component/button';
-import { toast, ToastContainer } from 'react-toastify';
-let clear;
+import  { useEffect, useState } from 'react'
+import Flashcards from '../componet/Flashcards';
+import Head from '../componet/Head';
+
+
 const User = () => {
     const [flc,setflc]=useState([]);
     const[loading,setloading]=useState(true);
     const [isflipped,setisflipped]=useState(false);
     const[messg,setmessg]=useState(" ");
-    const [val,setval]=useState(" ");
-  const handle=(e:Event)=>{
-    setval(e.target.value)
-    
-  }
+   
   const handleflip=()=>{
     setisflipped(!isflipped);
    }

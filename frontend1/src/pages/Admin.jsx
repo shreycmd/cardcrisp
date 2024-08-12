@@ -52,7 +52,7 @@ const Admin = () => {
     }
   };
 
-  const handleDeleteCard = async (id: number) => {
+  const handleDeleteCard = async (id) => {
     try {
       await axios.delete(`https://cardcrisp.onrender.com/admin/card/${id}`);
       setcards(cards.filter(card => card.id !== id));

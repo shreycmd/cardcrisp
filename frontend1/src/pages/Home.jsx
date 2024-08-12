@@ -1,7 +1,7 @@
-import React from 'react'
-import Button from '../component/button'
+
+import Button from '../componet/Button'
 import { Link } from 'react-router-dom'
-import Head from '../component/Head'
+import Head from '../componet/Head'
 
 const Home = () => {
   return (

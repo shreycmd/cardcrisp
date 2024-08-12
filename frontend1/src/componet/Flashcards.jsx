@@ -1,13 +1,7 @@
-import React, { useState } from 'react'
-import ReactCardFlip from 'react-card-flip'
-interface problem{
-    question:string
-    answer:string
-    isflipped:boolean
-    handleflip:()=>void
-}
 
-const Flashcards = ({question,answer,isflipped,handleflip}:problem ) => {
+import ReactCardFlip from 'react-card-flip'
+
+const Flashcards = ({question,answer,isflipped,handleflip} ) => {
    
   return (
     <div  className='' >
