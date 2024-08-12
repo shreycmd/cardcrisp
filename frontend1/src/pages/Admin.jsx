@@ -62,8 +62,8 @@ const Admin = () => {
   };
 
   return (
-    <div className="admin">
-      <h1 className='text-7xl font-bold text-gray-700'>Admin Setting for Card crisp</h1>
+    <div className="admin ml-4 font-serif">
+      <h1 className='text-7xl font-bold text-gray-700'>Admin Setting for CardCrisp</h1>
       
       <h2 className='text-xl font-semibold text-gray-700 mt-5'>Add Flashcard From here</h2>
       <div className='flex gap-5'>
@@ -95,27 +95,29 @@ const Admin = () => {
       
       {editCard && (
         <div>
-          <h2>Edit Flashcard</h2>
-          <input
-            type="text"
-            placeholder="Type"
-            
-            value={editCard.type}
-            onChange={e => setEditCard({ ...editCard, type: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="Question"
-            value={editCard.question}
-            onChange={e => setEditCard({ ...editCard, question: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="Answer"
-            value={editCard.answer}
-            onChange={e => setEditCard({ ...editCard, answer: e.target.value })}
-          />
-          <button onClick={handleEditCard} className='border-2 bg-gray-600 text-white px-4 py-2 rounded-md'>Save Changes</button>
+          <h2 className='text-xl font-semibold text-gray-700 mt-5'>Edit Flashcard</h2>
+          <div className='flex gap-4'><input
+          type="text"
+          placeholder="Type"
+          className='border-sky-200 border-2'
+          value={editCard.type}
+          onChange={e => setEditCard({ ...editCard, type: e.target.value })}
+        />
+        <input
+          type="text"
+          className='border-sky-200 border-2'
+          placeholder="Question"
+          value={editCard.question}
+          onChange={e => setEditCard({ ...editCard, question: e.target.value })}
+        />
+        <input
+          type="text"
+          className='border-sky-200 border-2'
+          placeholder="Answer"
+          value={editCard.answer}
+          onChange={e => setEditCard({ ...editCard, answer: e.target.value })}
+        />
+        <button onClick={handleEditCard} className='border-2 bg-gray-600 text-white px-4 py-2 rounded-md'>Save Changes</button></div>
         </div>
       )}
       

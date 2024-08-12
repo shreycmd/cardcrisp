@@ -73,7 +73,7 @@ const User = () => {
             >
               Previous
             </button>
-            <div className='font-bold text-gray-900'>{messg}</div>
+            <div className='font-bold text-red-600 font-serif'>{messg}</div>
             <button
               onClick={handlenext}
               
