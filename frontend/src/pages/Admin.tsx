@@ -15,7 +15,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchFlashcards = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/admin/card');
+        const response = await axios.get('https://cardcrisp.onrender.com/admin/card');
         setcards(response.data);
       } catch (error) {
         console.error('Error fetching cards', error);
@@ -27,7 +27,7 @@ const Admin = () => {
 
   const handleAddCard = async () => {
     try {
-      await axios.post('http://localhost:3000/admin/card', newCard);
+      await axios.post('https://cardcrisp.onrender.com/admin/card', newCard);
       setNewCard({ type: '', question: '', answer: '' });
       setcards([...cards, newCard]);
     } catch (error) {
@@ -38,7 +38,7 @@ const Admin = () => {
   const handleEditCard = async () => {
     if (editCard) {
       try {
-        await axios.put(`http://localhost:3000/admin/card/${editCard.id}`, editCard);
+        await axios.put(`https://cardcrisp.onrender.com/admin/card/${editCard.id}`, editCard);
         setcards(
           cards.map(card =>(
             
@@ -54,7 +54,7 @@ const Admin = () => {
 
   const handleDeleteCard = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:3000/admin/card/${id}`);
+      await axios.delete(`https://cardcrisp.onrender.com/admin/card/${id}`);
       setcards(cards.filter(card => card.id !== id));
     } catch (error) {
       console.error('Error deleting flashcard', error);
