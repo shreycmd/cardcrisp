@@ -20,7 +20,7 @@ const User = () => {
    }
     useEffect(()=>{
         const fetchcards= async()=>{
-       const response= await axios.get("http://localhost:3000/user");
+       const response= await axios.get("https://cardcrisp.onrender.com/user");
        if(response.data){
         setloading(false);
        }
