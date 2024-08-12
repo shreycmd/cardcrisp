@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.card{
+  width: 250px;
+  height: 200px;
+  border:1px solid black;
+  border-radius:25px;
+  margin:50px auto;
+  background-color: skyblue; 
+  box-shadow: 10px 5px 5px gray;
+}
+.cb{
+  background: rgb(181, 212, 212);
+}
