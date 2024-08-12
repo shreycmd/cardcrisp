@@ -2,13 +2,13 @@ import axios from 'axios';
 import  { useEffect, useState } from 'react'
 import Flashcards from '../componet/Flashcards';
 import Head from '../componet/Head';
-
-
+import Button from '../componet/Button';
+import { Link } from 'react-router-dom';
 const User = () => {
     const [flc,setflc]=useState([]);
     const[loading,setloading]=useState(true);
     const [isflipped,setisflipped]=useState(false);
-    const[messg,setmessg]=useState(" ");
+    const[messg,setmessg]=useState("    ");
    
   const handleflip=()=>{
     setisflipped(!isflipped);
@@ -65,7 +65,7 @@ const User = () => {
                   
                 />
                 </div>
-            <div className="mt-4 flex justify-around">
+            <div className="mt-4 flex justify-between">
             <button
               onClick={handleprev}
               className="px-4 py-2 bg-blue-500 text-white rounded-lg"
@@ -73,7 +73,7 @@ const User = () => {
             >
               Previous
             </button>
-            <div className='font-bold text-red-600 font-serif'>{messg}</div>
+            <div className='font-bold text-red-600 font-serif  '><p>{messg}</p></div>
             <button
               onClick={handlenext}
               
@@ -82,9 +82,12 @@ const User = () => {
               Next
             </button>
           </div>
-            </div></div>:<div>{null}</div>
+            </div> <Link to="/admin"><div className='flex items-center justify-center mt-15'><Button content="Use as Admin"/></div></Link></div>:<div>{null}</div>
+            
           }
-  
+          
+
+          
         </div>
       );
     };

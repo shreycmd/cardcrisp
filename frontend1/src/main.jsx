@@ -5,6 +5,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+  <div className='font-serif'><App /></div>
+    
   </StrictMode>,
 )

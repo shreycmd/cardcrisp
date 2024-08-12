@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Button from '../componet/Button';
+import { Link } from 'react-router-dom';
 
 
 
@@ -163,7 +165,7 @@ const Admin = () => {
           
         </table>
       </div>
-      
+      <Link to="/user"><div className='flex items-center justify-center mt-10'><Button content="Use as User"/></div></Link>
     </div>
   );
 };
